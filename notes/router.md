@@ -1,12 +1,14 @@
-#React Router 学习
+# React Router 学习
 
-官方文档：https://reactrouter.com/web/guides/quick-start
+- 官方文档：https://reactrouter.com/web/guides/quick-start
 
-###一、前言
+- 示例：https://github.com/Hayden-gh/React-Study/blob/main/my-app/src/App.js
+
+### 一、前言
 
 React Router目前已经更新到了V5版本，其中从V4版本开始和之前的版本有了较大的差异，本文便是从基于V5版本的学习记录。
 
-###二、React Router 介绍
+### 二、React Router 介绍
 
 #### 1.组件
 
@@ -22,9 +24,9 @@ React Router 中的组件主要分为三类：
 - hash模式下url中会带有`#`，`#`后的路由将不会包含在请求中，因此当改变时也不会重新加载页面。
 
 
-###三、基础用法
+### 三、基础用法
 
-####1.安装并引入组件
+#### 1.安装并引入组件
 
 使用React Router之前需要先安装
 ````
@@ -36,7 +38,7 @@ npm install react-router-dom
 import { BrowserRouter, Route } from "react-router-dom";
 ````
 
-####2.编写组件和路由配置
+#### 2.编写组件和路由配置
 
 编写路由代码，其中最基本的两个属性就是path：路由的路径，component：该路由渲染的组件，如下面的例子，定义了两个路由`/`和`/first`，对应的组件分别是home，first。
 ````
@@ -78,7 +80,7 @@ const hello = (
 </BrowserRouter>
 ````
 
-####3.添加导航跳转
+#### 3.添加导航跳转
 
 添加跳转链接，对配置完的路由进行测试
 ````
@@ -165,7 +167,7 @@ const home = ({ history }) => {
 };
 ````
 
-####4.路由重定位
+#### 4.路由重定位
 
 `Redirect`组件可以在组件内进行重定位（强制跳转），例如下面的例子当`name`不为`tom`的时候将重定位到`/`。
 ````
@@ -196,7 +198,7 @@ const hello = (
       </Switch>
 ````
 
-####5.路由守卫拦截
+#### 5.路由守卫拦截
 
 当应用对权限管理有要求的时候，可以结合js逻辑只渲染该权限下可访问的路由，实现路由守卫功能。
 ````
@@ -209,7 +211,7 @@ const hello = (
       </Switch>
 ````
 
-####6.Router hooks
+#### 6.Router hooks
 
 `Router hooks`提供了四个钩子函数，可以使我们更方便的使用路由，首先`useParams`可以直接获取路由参数。
 ````
@@ -262,8 +264,3 @@ const Hello = () => {
   );
 };
 ````
-路由
-
-函数，类，hook区别
-
-组件数据传递
