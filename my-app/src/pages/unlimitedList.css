@@ -1,0 +1,7 @@
+.list-div {
+    width: 700px;
+    height: 300px;
+    border: 2px solid rgb(0, 0, 0);
+    margin: 10px;
+    overflow: scroll;
+}

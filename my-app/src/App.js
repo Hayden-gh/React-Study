@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, NavLink, Link, Redirect, Switch, useHistory, useParams, useLocation, useRouteMatch } from "react-router-dom";
 import { Grandparent } from "./pages/context";
+import { UnlimitedList } from './pages/unlimitedList.jsx'
 import "./App.css";
 
 function App() {
@@ -23,6 +24,9 @@ function App() {
                         <Link to="/welcome">welcome</Link>
                     </li>
                     <li>
+                        <Link to="/unlimitedList">unlimitedList</Link>
+                    </li>
+                    <li>
                         <NavLink to="/welcome" activeClassName="light">
                             welcome（NacLink）
                         </NavLink>
@@ -32,6 +36,7 @@ function App() {
             <Switch>
                 <Route path="/" exact component={Home} />
                 <Route path="/hello/:name" component={Hello} />
+                <Route path="/unlimitedList" component={UnlimitedList} />
                 {isAdmin ? <Route path="/welcome" render={() => <h1>Welcome!</h1>} /> : null}
                 {/*404 page*/}
                 <Route render={() => <h1>404: page not found</h1>} />
